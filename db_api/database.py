@@ -1,14 +1,11 @@
-import asyncio
 from datetime import timedelta, datetime
 
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
-from config import Config, load_config
 from sqlalchemy import select, func, update
-from models import User
+from .models import User
 from typing import Optional
 
 
-config = load_config('.env')
 
 class SQLAlchemySession():
     def __init__(self, SQLALCHEMY_DATABASE_URI):

@@ -1,8 +1,8 @@
 import asyncio
 
-from config import load_config
-from init_db import DBConnection
-from database import SQLAlchemySession
+from data.config import load_config
+from db_api.init_db import DBConnection
+from db_api.database import SQLAlchemySession
 
 config = load_config(path='.env')
 async def create_tables():
