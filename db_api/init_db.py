@@ -1,8 +1,6 @@
-import asyncio
-from sqlalchemy.ext.asyncio import async_sessionmaker, AsyncAttrs, AsyncSession, create_async_engine
-from config import Config, load_config
-from db_base import Base
-from  models import User
+from sqlalchemy.ext.asyncio import create_async_engine
+from data.config import Config, load_config
+from .db_base import Base
 
 
 class DBConnection:
